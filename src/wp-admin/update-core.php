@@ -51,7 +51,7 @@ function list_core_update( $update ) {
 			$form_action = 'update-core.php?action=do-core-reinstall';
 		} else {
 			$php_compat     = version_compare( $php_version, $update->php_version, '>=' );
-			if ( file_exists( WP_CONTENT_DIR . '/db.php' ) && empty( $wpdb->is_mysql ) )
+			if ( file_exists( WP_DROPINS_DIR . '/db.php' ) && empty( $wpdb->is_mysql ) )
 				$mysql_compat = true;
 			else
 				$mysql_compat = version_compare( $mysql_version, $update->mysql_version, '>=' );

@@ -9,8 +9,8 @@
  */
 
 /** Include user install customize script. */
-if ( file_exists(WP_CONTENT_DIR . '/install.php') )
-	require (WP_CONTENT_DIR . '/install.php');
+if ( file_exists(WP_DROPINS_DIR . '/install.php') )
+	require (WP_DROPINS_DIR . '/install.php');
 
 /** WordPress Administration API */
 require_once(ABSPATH . 'wp-admin/includes/admin.php');

@@ -126,6 +126,14 @@ function wp_plugin_directory_constants() {
 		define( 'PLUGINDIR', 'wp-content/plugins' ); // Relative to ABSPATH. For back compat.
 
 	/**
+	 * Allows for the dropins directory to be moved from the default location.
+	 *
+	 * @since 3.9.0
+	 */
+	if ( !defined('WP_DROPINS_DIR') )
+		define( 'WP_DROPINS_DIR', WP_CONTENT_DIR ); // full path, no trailing slash
+
+	/**
 	 * Allows for the mu-plugins directory to be moved from the default location.
 	 *
 	 * @since 2.8.0
